@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta description="">
+<!-- resources/views/layouts/app.blade.php -->
 
-        <title>De PedaalRidder</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta description="">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
 <body>
     <div class="w-full bg-[#F1F4F3]">
         <div class="w-full flex items-center justify-between sticky">
@@ -20,28 +21,27 @@
             </div>
             <div class="w-1/3">
                 <ul class="flex justify-between">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Accessoires</a></li>
-                    <li><a href="">Reparatie</a></li>
-                    <li><a href="">Huren</a></li>
-                    <li><a href="">Kopen</a></li>
-                    <li><a href="">Over ons</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Accessoires</a></li>
+                    <li><a href="#">Reparatie</a></li>
+                    <li><a href="#">Huren</a></li>
+                    <li><a href="#">Kopen</a></li>
+                    <li><a href="#">Over ons</a></li>
                 </ul>
             </div>
             <div class="w-1/3 flex justify-end">
-                <div class="p-3">
-                    <a href="">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                </div>  
+                @if (Auth::check())
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <button type="submit" class="p-3 text-red-600 hover:text-red-700 focus:outline-none"><i class="fa-regular fa-user"></i> Logout</button>
+                    </form>
+                @else
+                    <div class="p-3">
+                        <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i> Login</a>
+                    </div>
+                @endif
                 <div class="p-3 pr-4">
-                    <a href="">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                    
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
         </div>
@@ -72,7 +72,6 @@
                                 <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="underline">terms and conditions</a>.</label>
                             </div>
-                            
                         </div>
                     </form>
                 </div>
