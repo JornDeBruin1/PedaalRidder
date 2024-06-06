@@ -17,3 +17,7 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/about-us', [AboutUsController::class, 'index']);
+Route::get('/products', function ()
+{
+    return view('products');
+});

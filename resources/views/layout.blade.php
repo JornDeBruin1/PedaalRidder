@@ -29,6 +29,7 @@
                     <li><a href="">Huren</a></li>
                     <li><a href="">Kopen</a></li>
                     <li><a href="about-us">Over ons</a></li>
+
                 </ul>
             </div>
             <div class="w-1/3 flex justify-end">
