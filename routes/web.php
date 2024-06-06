@@ -14,6 +14,6 @@ use App\Http\Controllers\AboutUsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/about-us', [AboutUsController::class, 'index']);
