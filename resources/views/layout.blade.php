@@ -27,8 +27,8 @@
                         <a href="">Accessoires</a></li>
                     <li><a href="">Reparatie</a></li>
                     <li><a href="">Huren</a></li>
-                    <li><a href="">Kopen</a></li>
-                    <li><a href="about-us">Over ons</a></li>
+                    <li><a href="/products">Kopen</a></li>
+                    <li><a href="/about-us">Over ons</a></li>
 
                 </ul>
             </div>

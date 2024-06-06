@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="productHeader bg-headerImgProducts bg-no-repeat ml-10">
+<div class="productHeader bg-headerImgProducts bg-no-repeat ">
     <div class="pt-[20%] pb-[24%] pl-10 pr-[20%]"><h1 class="font-bold headerText text-white">DE PEDAALRIDDER <div class="text-5xl grootText">This Is Two.</div>Introducing</h1></div>
 </div>
 
