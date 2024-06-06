@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutUsController;
+use Illuminate\Support\Facades\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +23,8 @@ Route::get('/products', function ()
 {
     return view('products');
 });
+
+// Removed 'verify' => true
+Auth::routes(); 
+
+Route::get('/login', [App\Http\Controllers\HomeController::class, 'index'])->middleware('auth')->name('login');

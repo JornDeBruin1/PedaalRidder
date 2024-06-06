@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="productHeader bg-headerImgProducts bg-no-repeat ml-10">

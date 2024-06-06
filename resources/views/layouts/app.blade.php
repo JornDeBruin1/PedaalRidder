@@ -37,7 +37,7 @@
                     </form>
                 @else
                     <div class="p-3">
-                        <a href="{{ route('login') }}"><i class="fa-regular fa-user"></i> Login</a>
+                        <a href="/login"><i class="fa-regular fa-user"></i> Login</a>
                     </div>
                 @endif
                 <div class="p-3 pr-4">
