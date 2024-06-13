@@ -8,7 +8,12 @@ export default {
     theme: {
         extend: {
             backgroundImage: {
-                headerImgProducts:"url('/resources/images/product-header.png')",
+                aboutUsImage: "url('/resources/images/about-us-header.png')",
+                headerImgIndex: "url('/resources/images/header-image.png')",
+                contentImgIndex:
+                    "url('/resources/images/content-index-img.png')",
+                headerImgProducts:
+                    "url('/resources/images/product-header.png')",
             },
         },
     },
