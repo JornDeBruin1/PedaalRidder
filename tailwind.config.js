@@ -7,8 +7,7 @@ export default {
     ],
     theme: {
         extend: {
-            backgroundImage:{
-                aboutUsImage: "url('/resources/images/about-us-header.png')",
+            backgroundImage: {
                 headerImgIndex: "url('/resources/images/header-image.png')",
                 contentImgIndex:
                     "url('/resources/images/content-index-img.png')",
@@ -16,5 +15,4 @@ export default {
         },
     },
     plugins: [],
-
 };
