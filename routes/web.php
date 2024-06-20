@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ReperatieController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +18,9 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/about-us', [AboutUsController::class, 'index']);
+Route::get('/reparatie', [\App\Http\Controllers\ReperatieController::class, 'index'])->name('reperatie'); 
+Route::post('/reparatie/save', [\App\Http\Controllers\ReperatieController::class, 'store'])->name('reperatie.store'); 
+
 Route::get('/products', function ()
 {
     return view('products');

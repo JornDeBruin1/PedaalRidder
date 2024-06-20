@@ -1,5 +1,5 @@
 import "./bootstrap";
-// Burger menus
+// Burger menu
 document.addEventListener("DOMContentLoaded", function () {
     // open
     const burger = document.querySelectorAll(".navbar-burger");

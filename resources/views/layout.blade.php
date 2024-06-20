@@ -27,7 +27,7 @@
             <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
                 <li><a class="text-sm hover:text-blue-600" href="/">Home</a></li>
                 <li class="text-sm hover:text-blue-600">Accessoires</li>
-                <li><a class="text-sm hover:text-blue-600" href="#">Reparatie</a></li>
+                <li><a class="text-sm hover:text-blue-600" href="/reperatie">Reparatie</a></li>
                 <li><a class="text-sm hover:text-blue-600 " href="#">Huren</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/products">Kopen</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/about-us">Over ons</a></li>
@@ -68,7 +68,7 @@
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Accessoires</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Reparatie</a>
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/reperatie">Reparatie</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Huren</a>
@@ -90,10 +90,10 @@
                 <ul class="p-4 flex flex-col">
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Accessoires</a></li>
-                    <li><a href="#">Reparatie</a></li>
+                    <li><a href="/reperatie">Reparatie</a></li>
                     <li><a href="#">Huren</a></li>
-                    <li><a href="#">Kopen</a></li>
-                    <li><a href="#">Over ons</a></li>
+                    <li><a href="/products">Kopen</a></li>
+                    <li><a href="/about-us">Over ons</a></li>
                 </ul>
             </div>
             <div class="w-2/3">
