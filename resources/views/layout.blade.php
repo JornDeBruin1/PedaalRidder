@@ -24,7 +24,7 @@
                     </svg>
                 </button>
             </div>
-            <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+            <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
                 <li><a class="text-sm hover:text-blue-600" href="/">Home</a></li>
                 <li class="text-sm hover:text-blue-600">Accessoires</li>
                 <li><a class="text-sm hover:text-blue-600" href="#">Reparatie</a></li>
