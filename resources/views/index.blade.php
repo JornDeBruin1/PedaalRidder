@@ -33,7 +33,7 @@
         </div>
         <div class="ml-[15%] w-1/2 mb-10"><img src="{{Vite::asset('/resources/images/Text-media-static_background.png')}}" alt=""></div>
     </div>
-    <div class="w-full flex bg-white">
+    <div class="w-full flex bg-white pb-10">
         <div class="w-1/2">
             <h2 class="text-3xl text-center mt-10">Lorem, ipsum dolor.</h2>
             <p class="text-center ml-[15%] mt-2 w-2/3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi distinctio similique quaerat velit rerum, quia deleniti? Omnis dignissimos sunt a?</p>
@@ -43,13 +43,9 @@
         </div>
     </div>
     
-    <div class="w-full flex my-40 bg-white">
-        {{-- data van milan hier neer zetten voor 2 of meer fietsen --}}
-        <div class="w-full">
-        </div>
-    </div>
+  
     
-    <div class="w-full bg-[#F1F4F3]">
+    <div class="w-full bg-[#F1F4F3] mt-10">
         <div class="w-full flex flex-col">
             <h2 class="text-3xl text-center pb-10">
                 Contact
