@@ -3,19 +3,19 @@
 @section("content")
     <div class="w-full">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-             {{-- confirmation bericht --}}
+    {{-- confirmation bericht --}}
     @if(\Session::has('bericht'))
-    <div class="bg-green-600 rounded w-1/2 m-auto text-center border-black border">
-    
-        <p class="text-white text-lg m-2">{!! \Session::get('bericht') !!}</p>
-    
-    </div>
-@endif
-@if(\Session::has('error'))
-    <div class="bg-red-600 rounded w-1/2 m-auto text-center border-black border"> 
-        <p class="text-white text-lg m-2">{!! \Session::get('error') !!}</p>
-    </div>
-@endif
+        <div class="bg-green-600 rounded w-1/2 m-auto text-center border-black border">
+        
+            <p class="text-white text-lg m-2">{!! \Session::get('bericht') !!}</p>
+        
+        </div>
+    @endif
+    @if(\Session::has('error'))
+        <div class="bg-red-600 rounded w-1/2 m-auto text-center border-black border"> 
+            <p class="text-white text-lg m-2">{!! \Session::get('error') !!}</p>
+        </div>
+    @endif
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Reparatie</h2>
             <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">Als er iets kapot is aan uw fiets. Dan kan het formulier hier onder invullen!</p>
             <form action="/reparatie/save" class="space-y-8" method="post">

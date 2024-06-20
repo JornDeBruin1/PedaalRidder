@@ -14,9 +14,10 @@ use App\Http\Controllers\ReperatieController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [\App\Http\Controllers\ContactController::class, 'index'])->name('index'); 
+
+Route::post('/contact/save', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store'); 
+
 Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/reparatie', [\App\Http\Controllers\ReperatieController::class, 'index'])->name('reperatie'); 
 Route::post('/reparatie/save', [\App\Http\Controllers\ReperatieController::class, 'store'])->name('reperatie.store'); 
