@@ -9,6 +9,10 @@ export default {
         extend: {
             backgroundImage: {
                 headerImgIndex: "url('/resources/images/header-image.png')",
+                aboutUsImage:
+                    "url('/resources/images/about-us-header.png')",
+                aboutUsImage2:
+                    "url('/resources/images/Text-media-new_wrapper.png')",
                 contentImgIndex:
                     "url('/resources/images/content-index-img.png')",
             },
