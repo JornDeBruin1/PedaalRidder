@@ -17,7 +17,4 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/about-us', [AboutUsController::class, 'index']);
-Route::get('/products', function ()
-{
-    return view('products');
-});
+Route::get('/products', [\App\Http\Controllers\FietsenController::class, 'index'])->name('fietsen');

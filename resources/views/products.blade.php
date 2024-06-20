@@ -5,24 +5,77 @@
     <div class="pt-[20%] pb-[24%] pl-10 pr-[20%]"><h1 class="font-bold headerText text-white">DE PEDAALRIDDER <div class="text-5xl grootText">This Is Two.</div>Introducing</h1></div>
 </div>
 
-<div class="fietsen ml-10 mt-12 flex">
+<form class="max-w-sm mx-auto">
+  <label for="Soort" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kies een Soort</label>
+  <select id="Soort" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <option selected>Alle</option>
+    <option value="Man">Man</option>
+    <option value="Vrouw">Vrouw</option>
+    <option value="Kind">Kind</option>
+  </select>
+</form>
+<div class="fietsen ml-10 mt-12 flex flex-wrap">
 
-    <div class="fiets 1 bg-[#cdcdcd] ml-40 w-1/3 rounded-lg">
+    @if (count($fietsen) > 0)
+    @foreach($fietsen as $fiets)
+    <a href="" class="fietsPage w-1/2 {{ $fiets->Type }}">
+    <div class="fiets 1 bg-[#cdcdcd] ml-36 pb-5 rounded-lg h-full w-1/2">
         <div class="fietsImg1 bg-fiets1 bg-no-repeat"></div>
         <div class="fietsText1">
-            <h1 class="text-2xl font-bold pt-5 ml-5">Electric Ace</h1>
-            <p class="text-lg mt-1 ml-5">Rider height: 173-200cm</p>
-            <img src="{{ Vite::asset('resources/images/fiets.png') }}" class="logo">
+            <h1 class="text-2xl font-bold pt-5 ml-5">{{ $fiets->Naam }}</h1>
+            <p class="text-lg mt-1 ml-5">Rider height: {{ $fiets->RijHoogte }}</p>
+            <img src="{{ Vite::asset($fiets->AfbeeldingPad) }}">
         </div>
     </div>
+    </a>    
+    @endforeach
+    @else
+    <h1>Geen Fietsen Gevonden</h1>
+    @endif
+</div>
+<br><br>
+<div class="LeaseStuk flex ">
+    <img src="{{ Vite::asset('resources/images/Text-media-static_background.png') }}" class="ml-24 w-2/5" alt="">
+    <div class="ml-24 w-2/5">
+        <h1 class="text-2xl font-bold pt-5">Lease een fiets</h1>
+        <p class="text-lg mt-1">Lease een fiets voor een vast bedrag per maand. Zo heb je altijd een fiets en hoef je niet in een keer een groot bedrag te betalen.</p>
+        <button class="bg-[#cdcdcd] text-black border border-white w-2/5 rounded-full px-4 py-2 mt-4">Lease een fiets</button>
+</div>
+</div>
+<br><br>
 
-    <div class="fiets 2 bg-[#cdcdcd] ml-36 w-1/3 rounded-lg">
-        <div class="fietsImg1 bg-fiets1 bg-no-repeat"></div>
-        <div class="fietsText1">
-            <h1 class="text-2xl font-bold pt-5 ml-5">Electric Ivy</h1>
-            <p class="text-lg mt-1 ml-5">Rider height: 164-184cm</p>
-            <img src="{{ Vite::asset('resources/images/dames-fiets.png') }}" class="logo">
-        </div>
+<div class="review mb-6">
+    <h1 class="text-4xl font-bold mb-8 pt-5 ml-24">They talked about our store</h1>
+    <div class="reviews flex justify-evenly"> 
+    <div class="review1 flex max-w-56">
+    <p>"Erg erg goede winkel bbabababababababababab"</p>
+    </div>
+    <div class="review2 flex max-w-56">
+    <p>"Ik ben erg tevreden over de service, Ze hielpen me met baren"</p>
+    </div>
+    <div class="review3 flex max-w-56">
+    <p>"Ik ben erg tevreden over de service ~John mario"</p>
     </div>
 </div>
+</div>
+
+<br><br>
+
+<div class="w-full mt-[2%] mb-[2%] pl-[2%] flex">
+        <div class=" w-1/2 justify-items-center">
+            <h2 class="text-3xl pb-5 pt-[25%]">Geboren en getogen in Zevenaar</h2>
+            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non vestibulum sem. Integer non enim leo. Sed sed tincidunt elit. Sed feugiat consectetur tortor eget eleifend. Donec id sodales nisi. Proin vitae lorem in dolor mattis condimentum.</p>
+        </div>
+        <div class="w-1/2 flex ">
+            <img src="{{Vite::asset('/resources/images/wrapper.png')}}" alt="">
+        </div>
+    </div>
+<script src="{{ Vite::asset('resources/js/products.js') }}"></script>
+<style>
+    .hidden
+    {
+        display: none;
+    }
+
+</style>
 @endsection
