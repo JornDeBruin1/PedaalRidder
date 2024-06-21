@@ -33,7 +33,7 @@
             <h1 class="text-8xl text-center flex items-center justify-center">
                 Ontworpen door de beste ontwerpers,
                 handgemaakt in Europa,
-                rijplezier in elke stad
+                rij plezier in elke stad
             </h1>
         </div>
     </div>
