@@ -15,6 +15,8 @@ export default {
                     "url('/resources/images/Text-media-new_wrapper.png')",
                 contentImgIndex:
                     "url('/resources/images/content-index-img.png')",
+                headerImgProducts:"url('/resources/images/product-header.png')",
+
             },
         },
     },
