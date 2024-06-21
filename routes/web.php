@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccessoiresController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ReperatieController;
@@ -19,6 +20,8 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::get('/accessoires', [AccessoiresController::class, 'index']);
+
 Route::get('/', [\App\Http\Controllers\ContactController::class, 'index'])->name('index');
 
 Route::post('/contact/save', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
