@@ -30,7 +30,5 @@ Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/reparatie', [\App\Http\Controllers\ReperatieController::class, 'index'])->name('reperatie');
 Route::post('/reparatie/save', [\App\Http\Controllers\ReperatieController::class, 'store'])->name('reperatie.store');
 
-Route::get('/products', function ()
-{
-    return view('products');
-});
+Route::get('/products', [\App\Http\Controllers\FietsenController::class, 'index'])->name('fietsen');
+
