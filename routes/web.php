@@ -13,7 +13,12 @@ use App\Http\Controllers\ReperatieController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/', function () {
+    return view('index');
+});
+Route::get('/about', function () {
+    return view('about');
+});
 Route::get('/', [\App\Http\Controllers\ContactController::class, 'index'])->name('index');
 
 Route::post('/contact/save', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
