@@ -33,8 +33,16 @@
             <h1 class="text-8xl text-center flex items-center justify-center">
                 Ontworpen door de beste ontwerpers,
                 handgemaakt in Europa,
-                rijplezier in elke stad
+                rij plezier in elke stad
             </h1>
+        </div>
+    </div>
+    <div class="bg-aboutUsImage2">
+        <div class="pt-[20%] pb-[20%] pl-10">
+            <h1 class="text-5xl ml-[60%] text-white">Gemaakt voor jou!</h1>
+            <p class="text ml-[60%] pb-1 text-white w-80">Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Accusamus animi at, beatae,
+                commodi dicta distinctio eius eligendi esse ex hic illo ipsa laudantium mollitia pariatur praesentium qui, quo totam voluptatem.</p>
         </div>
     </div>
 
