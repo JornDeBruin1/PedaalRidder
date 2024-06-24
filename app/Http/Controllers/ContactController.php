@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\contact;
+use App\Models\Contact;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -29,16 +29,16 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        try{
+        try {
             $contact = new Contact();
             $contact->voornaam = $request->input('Voornaam');
             $contact->achternaam = $request->input('Achternaam');
             $contact->email = $request->input('Email');
             $contact->telefoonnummer = $request->input('Telefoonnummer');
             $contact->save();
-            return redirect()->route('index')->with('bericht', 'Bedankt voor uw bericht, we nemen zo snel mogelijk contact met u op.');  
-        }
-        catch(Exception $e){
+
+            return redirect()->route('index')->with('bericht', 'Bedankt voor uw bericht, we nemen zo snel mogelijk contact met u op.');
+        } catch (Exception $e) {
             return redirect()->route('index')->with('error', 'Vul alle velden in.');
         }
     }
@@ -46,7 +46,7 @@ class ContactController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(contact $contact)
+    public function show(Contact $contact)
     {
         //
     }
@@ -54,7 +54,7 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(contact $contact)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -62,7 +62,7 @@ class ContactController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, contact $contact)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -70,7 +70,7 @@ class ContactController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(contact $contact)
+    public function destroy(Contact $contact)
     {
         //
     }

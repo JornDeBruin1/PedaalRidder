@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta description="">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
 
-        <title>De PedaalRidder</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-<body>
+    <title>De PedaalRidder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="{{ $bodyClass ?? '' }}">
     <div class="w-full bg-[#F1F4F3]">
         <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
             <a class="text-3xl font-bold leading-none" href="#">
@@ -26,8 +25,8 @@
             </div>
             <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
                 <li><a class="text-sm hover:text-blue-600" href="/">Home</a></li>
-                <li class="text-sm hover:text-blue-600">Accessoires</li>
-                <li><a class="text-sm hover:text-blue-600" href="/reperatie">Reparatie</a></li>
+                <li><a class="text-sm hover:text-blue-600" href="/accessoires">Accessoires</a></li>
+                <li><a class="text-sm hover:text-blue-600" href="/reparatie">Reparatie</a></li>
                 <li><a class="text-sm hover:text-blue-600 " href="#">Huren</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/products">Kopen</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/about-us">Over ons</a></li>
@@ -35,16 +34,29 @@
             </ul>
             <div class="w-1/3 flex justify-end">
                 <div class="p-3">
-                    <a href="">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
+                    @auth
+                        <span>{{ Auth::user()->name }}</span>
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                            <i class="fa-regular fa-user"></i> Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}">
+                            <i class="fa-regular fa-user"></i> Login
+                        </a>
+                    @endauth
                 </div>
                 <div class="p-3 pr-4">
-                    <a href="">
+                    <a href="javascript:void(0)">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
             </div>
+            @include('cart-sheet')
         </nav>
         <div class="navbar-menu relative z-50 hidden">
             <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
@@ -68,7 +80,7 @@
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Accessoires</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/reperatie">Reparatie</a>
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/reparatie">Reparatie</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Huren</a>
@@ -90,7 +102,7 @@
                 <ul class="p-4 flex flex-col">
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Accessoires</a></li>
-                    <li><a href="/reperatie">Reparatie</a></li>
+                    <li><a href="/reparatie">Reparatie</a></li>
                     <li><a href="#">Huren</a></li>
                     <li><a href="/products">Kopen</a></li>
                     <li><a href="/about-us">Over ons</a></li>
@@ -109,7 +121,6 @@
                                 <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="underline">terms and conditions</a>.</label>
                             </div>
-
                         </div>
                     </form>
                 </div>

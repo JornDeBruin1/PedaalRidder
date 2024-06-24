@@ -1,27 +1,30 @@
-// Burger menu
+import './bootstrap';
+
+// Initialize functions on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
-    // open
+    // Initialize other functionalities like cart and burger menu here
+    
+    // Burger menu
     const burger = document.querySelectorAll(".navbar-burger");
     const menu = document.querySelectorAll(".navbar-menu");
 
     if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
+        for (let i = 0; i < burger.length; i++) {
             burger[i].addEventListener("click", function () {
-                for (var j = 0; j < menu.length; j++) {
+                for (let j = 0; j < menu.length; j++) {
                     menu[j].classList.toggle("hidden");
                 }
             });
         }
     }
 
-    // close
     const close = document.querySelectorAll(".navbar-close");
     const backdrop = document.querySelectorAll(".navbar-backdrop");
 
     if (close.length) {
-        for (var i = 0; i < close.length; i++) {
+        for (let i = 0; i < close.length; i++) {
             close[i].addEventListener("click", function () {
-                for (var j = 0; j < menu.length; j++) {
+                for (let j = 0; j < menu.length; j++) {
                     menu[j].classList.toggle("hidden");
                 }
             });
@@ -29,17 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
+        for (let i = 0; i < backdrop.length; i++) {
             backdrop[i].addEventListener("click", function () {
-                for (var j = 0; j < menu.length; j++) {
+                for (let j = 0; j < menu.length; j++) {
                     menu[j].classList.toggle("hidden");
                 }
             });
         }
     }
-});
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Cart functionality
     const cartIcon = document.querySelector('.fa-cart-shopping');
     const cartSheet = document.getElementById('cartSheet');
     const closeCartButton = document.getElementById('closeCart');
@@ -49,26 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let cart = [];
 
-    cartIcon.addEventListener('click', function() {
-        cartSheet.classList.toggle('hidden');
-        renderCart();
-    });
-
-    closeCartButton.addEventListener('click', function() {
-        cartSheet.classList.add('hidden');
-    });
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const item = {
-                name: this.dataset.name,
-                price: this.dataset.price,
-                image: this.dataset.image
-            };
-            cart.push(item);
+    if (cartIcon) {
+        cartIcon.addEventListener('click', function() {
+            cartSheet.classList.toggle('hidden');
             renderCart();
         });
-    });
+
+        closeCartButton.addEventListener('click', function() {
+            cartSheet.classList.add('hidden');
+        });
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const item = {
+                    name: this.dataset.name,
+                    price: this.dataset.price,
+                    image: this.dataset.image
+                };
+                cart.push(item);
+                renderCart();
+            });
+        });
+    }
 
     function renderCart() {
         cartItemsList.innerHTML = '';
