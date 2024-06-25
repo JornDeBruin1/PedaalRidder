@@ -7,6 +7,7 @@ use App\Http\Controllers\FietsenController;
 use App\Http\Controllers\RentController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\NewsBriefController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,8 @@ Route::get('/accessoires', [AccessoiresController::class, 'index']);
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contact/save', [ContactController::class, 'store'])->name('contact.store');
+
+Route::post('/nieuwsbrief/save', [NewsBriefController::class, 'store'])->name('newsbrief.store');
 
 Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/reparatie', [ReparatieController::class, 'index'])->name('reparatie');
