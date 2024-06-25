@@ -120,7 +120,7 @@
 @endsection
 
 @section('modal')
-<div id="productModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" style="display: none;">
     <div class="bg-white p-5 rounded-lg w-1/2 relative">
         <button id="closeModal" class="absolute top-0 right-0 m-3 text-gray-500 hover:text-gray-700">
             <i class="fas fa-times"></i>
@@ -133,3 +133,7 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+    @vite('resources/js/modal.js')
+@endpush

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < burger.length; i++) {
             burger[i].addEventListener("click", function () {
                 for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
+                    menu[j].classList.toggle("is-hidden");
                 }
             });
         }
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < close.length; i++) {
             close[i].addEventListener("click", function () {
                 for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
+                    menu[j].classList.toggle("is-hidden");
                 }
             });
         }
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < backdrop.length; i++) {
             backdrop[i].addEventListener("click", function () {
                 for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
+                    menu[j].classList.toggle("is-hidden");
                 }
             });
         }
@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cartIcon) {
         cartIcon.addEventListener('click', function() {
-            cartSheet.classList.toggle('hidden');
+            cartSheet.classList.toggle('is-hidden');
             renderCart();
         });
 
         if (closeCartButton) {
             closeCartButton.addEventListener('click', function() {
-                cartSheet.classList.add('hidden');
+                cartSheet.classList.add('is-hidden');
             });
         }
 
@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderCart() {
         cartItemsList.innerHTML = '';
         if (cart.length === 0) {
-            emptyCartMessage.classList.remove('hidden');
+            emptyCartMessage.classList.remove('is-hidden');
         } else {
-            emptyCartMessage.classList.add('hidden');
+            emptyCartMessage.classList.add('is-hidden');
             cart.forEach(item => {
                 const listItem = document.createElement('li');
                 listItem.classList.add('flex', 'justify-between', 'items-center');
@@ -96,36 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     }
-
-    // Modal functionality
-    const modal = document.getElementById('productModal');
-    const closeModal = document.getElementById('closeModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalImage = document.getElementById('modalImage');
-    const modalDescription = document.getElementById('modalDescription');
-    const modalRijHoogte = document.getElementById('modalRijHoogte');
-    const modalPrice = document.getElementById('modalPrice');
-
-    closeModal.addEventListener('click', function () {
-        modal.classList.add('hidden');
-    });
-
-    const productElements = document.querySelectorAll('.product-item');
-    productElements.forEach(product => {
-        product.addEventListener('click', function () {
-            const name = this.dataset.name;
-            const price = this.dataset.price;
-            const image = this.dataset.image;
-            const description = this.dataset.description;
-            const rijhoogte = this.dataset.rijhoogte || '';
-
-            modalTitle.textContent = name;
-            modalImage.src = image;
-            modalDescription.textContent = description;
-            modalRijHoogte.textContent = rijhoogte ? 'Rijhoogte: ' + rijhoogte : '';
-            modalPrice.textContent = '€' + price;
-
-            modal.classList.remove('hidden');
-        });
-    });
 });
