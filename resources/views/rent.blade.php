@@ -120,7 +120,7 @@
 @endsection
 
 @section('modal')
-<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" style="display: none;">
+<div id="productModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
     <div class="bg-white p-5 rounded-lg w-1/2 relative">
         <button id="closeModal" class="absolute top-0 right-0 m-3 text-gray-500 hover:text-gray-700">
             <i class="fas fa-times"></i>
@@ -130,6 +130,16 @@
         <p id="modalDescription"></p>
         <p id="modalRijHoogte"></p>
         <p id="modalPrice" class="text-lg font-bold text-[#ff4500] mt-2"></p>
+    </div>
+</div>
+
+<div id="cartModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div class="bg-white p-5 rounded-lg w-1/2 relative">
+        <button id="closeCartModal" class="absolute top-0 right-0 m-3 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2 id="cartModalTitle" class="text-2xl font-bold mb-4">Item added to cart</h2>
+        <div id="cartModalBody"></div>
     </div>
 </div>
 @endsection

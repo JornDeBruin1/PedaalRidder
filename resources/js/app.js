@@ -1,47 +1,40 @@
 import './bootstrap';
 
-// Initialize functions on DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function () {
-    // Initialize other functionalities like cart and burger menu here
-    
-    // Burger menu
     const burger = document.querySelectorAll(".navbar-burger");
     const menu = document.querySelectorAll(".navbar-menu");
 
     if (burger.length && menu.length) {
-        for (let i = 0; i < burger.length; i++) {
-            burger[i].addEventListener("click", function () {
-                for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
-                }
+        burger.forEach((burgerElement, index) => {
+            burgerElement.addEventListener("click", function () {
+                menu[index].classList.toggle("hidden");
             });
-        }
+        });
     }
 
     const close = document.querySelectorAll(".navbar-close");
     const backdrop = document.querySelectorAll(".navbar-backdrop");
 
     if (close.length) {
-        for (let i = 0; i < close.length; i++) {
-            close[i].addEventListener("click", function () {
-                for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
-                }
+        close.forEach(closeElement => {
+            closeElement.addEventListener("click", function () {
+                menu.forEach(menuElement => {
+                    menuElement.classList.toggle("hidden");
+                });
             });
-        }
+        });
     }
 
     if (backdrop.length) {
-        for (let i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener("click", function () {
-                for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
-                }
+        backdrop.forEach(backdropElement => {
+            backdropElement.addEventListener("click", function () {
+                menu.forEach(menuElement => {
+                    menuElement.classList.toggle("hidden");
+                });
             });
-        }
+        });
     }
 
-    // Cart functionality
     const cartIcon = document.querySelector('.fa-cart-shopping');
     const cartSheet = document.getElementById('cartSheet');
     const closeCartButton = document.getElementById('closeCart');
@@ -65,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (addToCartButtons.length > 0) {
             addToCartButtons.forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function(event) {
+                    event.stopPropagation();
                     const item = {
                         name: this.dataset.name,
                         price: this.dataset.price,
@@ -73,6 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     };
                     cart.push(item);
                     renderCart();
+
+                    // Show the cart confirmation modal
+                    showCartConfirmationModal();
                 });
             });
         }
@@ -95,5 +92,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 cartItemsList.appendChild(listItem);
             });
         }
+    }
+
+    function showCartConfirmationModal() {
+        const cartModal = document.getElementById('cartModal');
+        cartModal.classList.remove('opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+            cartModal.classList.add('opacity-0', 'pointer-events-none');
+        }, 2000);
     }
 });

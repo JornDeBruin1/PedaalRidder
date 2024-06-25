@@ -14,7 +14,7 @@
                         <div class="w-full flex justify-between items-center mt-1">
                             <p class="text-lg font-bold text-[#ff4500]">€{{ $helm->prijs }}</p>
                             <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $helm->naam }}" data-price="{{ $helm->prijs }}" data-image="{{ Vite::asset($helm->image_path) }}">
-                                <i class="fa-solid fa-handshake"></i>
+                                <i class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
                     </div>
@@ -46,12 +46,15 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             @foreach ($snelbinders as $snelbinder)
                 <div class="bg-[#cdcdcd] flex flex-col items-center p-3 product-item cursor-pointer" data-name="{{ $snelbinder->naam }}" data-price="{{ $snelbinder->prijs }}" data-image="{{ Vite::asset($snelbinder->image_path) }}" data-description="{{ $snelbinder->beschrijving }}">
-                    <img src="{{ Vite::asset($snelbinder->image_path) }}" alt="{{ $snelbinder->naam }}" class="w-full h-64 object-contain">
+                    <img src="{{ Vite::asset($snelbinder->image_path) }}" alt="{{ $snelbinder->naam }}"
+                        class="w-full h-64 object-contain">
                     <div class="w-full flex flex-col">
                         <h2 class="mt-2 text-xl font-semibold">{{ $snelbinder->naam }}</h2>
                         <div class="w-full flex justify-between items-center mt-1">
                             <p class="text-lg font-bold text-[#ff4500]">€{{ $snelbinder->prijs }}</p>
-                            <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $snelbinder->naam }}" data-price="{{ $snelbinder->prijs }}" data-image="{{ Vite::asset($snelbinder->image_path) }}">
+                            <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $snelbinder->naam }}"
+                                data-price="{{ $snelbinder->prijs }}"
+                                data-image="{{ Vite::asset($snelbinder->image_path) }}">
                                 <i class="fa-solid fa-handshake"></i>
                             </a>
                         </div>
@@ -83,7 +86,7 @@
 @endsection
 
 @section('modal')
-<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center" style="display: none;">
+<div id="productModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
     <div class="bg-white p-5 rounded-lg w-1/2 relative">
         <button id="closeModal" class="absolute top-0 right-0 m-3 text-gray-500 hover:text-gray-700">
             <i class="fas fa-times"></i>
@@ -93,6 +96,16 @@
         <p id="modalDescription"></p>
         <p id="modalRijHoogte"></p>
         <p id="modalPrice" class="text-lg font-bold text-[#ff4500] mt-2"></p>
+    </div>
+</div>
+
+<div id="cartModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div class="bg-white p-5 rounded-lg w-1/2 relative">
+        <button id="closeCartModal" class="absolute top-0 right-0 m-3 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2 id="cartModalTitle" class="text-2xl font-bold mb-4">Item added to cart</h2>
+        <div id="cartModalBody"></div>
     </div>
 </div>
 @endsection
