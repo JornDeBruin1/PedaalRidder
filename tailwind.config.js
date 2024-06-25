@@ -18,7 +18,7 @@ export default {
                     "url('/resources/images/product-header.png')",
             },
             screens: {
-                CustomXsMediaQuery: "500px",
+                customXsMediaQuery: "375px",
                 customMediaQuery1540: "1540px",
                 customMediaQuery1720: "1720px",
             },
