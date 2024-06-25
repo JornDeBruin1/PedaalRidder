@@ -57,21 +57,25 @@ document.addEventListener("DOMContentLoaded", function () {
             renderCart();
         });
 
-        closeCartButton.addEventListener('click', function() {
-            cartSheet.classList.add('hidden');
-        });
-
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const item = {
-                    name: this.dataset.name,
-                    price: this.dataset.price,
-                    image: this.dataset.image
-                };
-                cart.push(item);
-                renderCart();
+        if (closeCartButton) {
+            closeCartButton.addEventListener('click', function() {
+                cartSheet.classList.add('hidden');
             });
-        });
+        }
+
+        if (addToCartButtons.length > 0) {
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const item = {
+                        name: this.dataset.name,
+                        price: this.dataset.price,
+                        image: this.dataset.image
+                    };
+                    cart.push(item);
+                    renderCart();
+                });
+            });
+        }
     }
 
     function renderCart() {
