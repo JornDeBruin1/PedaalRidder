@@ -12,8 +12,8 @@
 <body class="{{ $bodyClass ?? '' }}">
     <div class="w-full bg-[#F1F4F3]">
         <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
-            <a class="text-3xl font-bold leading-none" href="#">
-                <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="">
+            <a class="text-3xl font-bold leading-none" href="/">
+                <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
             </a>
             <div class="lg:hidden">
                 <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -27,7 +27,7 @@
                 <li><a class="text-sm hover:text-blue-600" href="/">Home</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/accessoires">Accessoires</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/reparatie">Reparatie</a></li>
-                <li><a class="text-sm hover:text-blue-600 " href="#">Huren</a></li>
+                <li><a class="text-sm hover:text-blue-600" href="/rent">Huren</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/products">Kopen</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/about-us">Over ons</a></li>
                 <li class="text-gray-300"></li>
@@ -62,8 +62,8 @@
             <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
-                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
-                        <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="/">
+                        <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
                     </a>
                     <button class="navbar-close">
                         <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,7 +83,7 @@
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/reparatie">Reparatie</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Huren</a>
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/rent">Huren</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/products">Kopen</a>
@@ -103,7 +103,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Accessoires</a></li>
                     <li><a href="/reparatie">Reparatie</a></li>
-                    <li><a href="#">Huren</a></li>
+                    <li><a href="/rent">Huren</a></li>
                     <li><a href="/products">Kopen</a></li>
                     <li><a href="/about-us">Over ons</a></li>
                 </ul>
