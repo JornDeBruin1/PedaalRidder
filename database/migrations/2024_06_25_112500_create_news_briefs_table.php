@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('news_briefs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table -> string("email");
+            $table->string('email')->unique();
         });
     }
 

@@ -5,9 +5,7 @@
       {{-- confirmation bericht --}}
       @if(\Session::has('bericht'))
       <div class="bg-green-600 rounded w-1/2 m-auto text-center border-black border">
-      
           <p class="text-white text-lg m-2">{!! \Session::get('bericht') !!}</p>
-      
       </div>
   @endif
   @if(\Session::has('error'))
@@ -25,7 +23,7 @@
     </div>
     <div class="md:w-full md:mt-[2%] md:mb-[2%] md:pl-[2%] flex md:flex-row customXsMediaQuery:flex-col customXsMediaQuery:items-center">
         <div class="w-1/2">
-            <img src="{{Vite::asset('/resources/images/wrapper.png')}}" alt="man op fiets">
+            <img src="{{ Vite::asset('/resources/images/wrapper.png') }}" alt="man op fiets">
         </div>
         <div class="md:w-1/2 "> 
             <h2 class="text-3xl pb-5 pt-[10%]">Huren</h2>
@@ -52,7 +50,7 @@
             <br>
             <p>Kom langs en ervaar het verschil zelf bij De Pedaalridder – jouw specialist in stadsfietsen!</p>
         </div>
-        <div class="ml-[15%] w-1/2 mb-10"><img src="{{Vite::asset('/resources/images/Text-media-static_background.png')}}" alt=""></div>
+        <div class="ml-[15%] w-1/2 mb-10"><img src="{{ Vite::asset('/resources/images/Text-media-static_background.png') }}" alt=""></div>
     </div>
     <div class="w-full flex bg-white pb-10 md:flex-row customXsMediaQuery:flex-col-reverse mt-10 customXsMediaQuery:items-center">
         <div class="md:w-1/3 ml-[10%]">
@@ -69,11 +67,9 @@
             <p>Ervaar de vrijheid van elektrisch fietsen met De Pedaalridder – jouw partner voor moderne mobiliteit!</p>
         </div>
         <div class="w-1/2 ml-[15%]">
-            <img class="mt-10" src="{{Vite::asset('/resources/images/biking-away.png')}}" alt="">
+            <img class="mt-10" src="{{ Vite::asset('/resources/images/biking-away.png')}}" alt="">
         </div>
     </div>
-    
-  
     
     <div class="w-full bg-[#F1F4F3] mt-10">
         <div class="w-full flex flex-col">

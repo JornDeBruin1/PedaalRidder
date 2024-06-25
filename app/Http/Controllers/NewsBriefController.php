@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\newsBrief;
+use App\Models\NewsBrief;
 use Exception;
 use Illuminate\Http\Request;
 
@@ -13,7 +13,7 @@ class NewsBriefController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -21,7 +21,7 @@ class NewsBriefController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -29,45 +29,45 @@ class NewsBriefController extends Controller
      */
     public function store(Request $request)
     {
-        try{
-            $newsBrief = new newsBrief();
+        try {
+            $newsBrief = new NewsBrief();
             $newsBrief->email = $request->input('newsbrief');
-            return redirect()->route('index')->with('bericht', 'Bedankt voor het aanmelden op onze nieuws Brief');  
-        }
-        catch(Exception $e){
-            return redirect()->route('index')->with('error', 'het email adres is onjuist');
+            $newsBrief->save(); // Ensure this line is present
+            return redirect()->route('index')->with('bericht', 'Bedankt voor het aanmelden voor onze nieuwsbrieven!');  
+        } catch (Exception $e) {
+            return redirect()->route('index')->with('error', 'Het e-mailadres is onjuist of al geregistreerd om nieuwsbrieven te ontvangen!');
         }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(newsBrief $newsBrief)
+    public function show(NewsBrief $newsBrief)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(newsBrief $newsBrief)
+    public function edit(NewsBrief $newsBrief)
     {
-        //
+        
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, newsBrief $newsBrief)
+    public function update(Request $request, NewsBrief $newsBrief)
     {
-        //
+        
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(newsBrief $newsBrief)
+    public function destroy(NewsBrief $newsBrief)
     {
-        //
+        
     }
 }
