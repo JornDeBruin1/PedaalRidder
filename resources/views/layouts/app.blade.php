@@ -111,12 +111,12 @@
             <div class="w-2/3">
                 <div class="ml-[30%]">
                     <h1 class="text-2xl font-bold pt-6">Meld je aan voor de nieuwsbrief</h1>
-                    <form action="" method="post">
+                    <form action="/nieuwsbrief/save" method="post">
                         @csrf
                         <div class="flex flex-col">
-                            <label for="">Geef je op voor onze nieuws brief!</label>
-                            <input class="rounded-full w-2/3 mt-5 bg-transparent border border-white px-4 py-3 text-xs lg:placeholder:text-lg" type="text" name="" placeholder="Geef uw mail adres..." id="brief">
-                            <button type="submit" class="bg-white text-black border border-white w-2/3 rounded-full px-4 py-2 mt-4">Meld aan!</button>
+                            <label for="brief">Geef je op voor onze nieuws brief!</label>
+                            <input class="rounded-full w-2/3 mt-5 bg-transparent border border-white px-4 py-3 text-xs lg:placeholder:text-lg" type="email" name="newsbrief" placeholder="Geef uw mail adres..." required id="brief">
+                            <button type="submit" class="bg-white text-black border border-white w-2/3 rounded-full px-4 py-2 mt-4" >Meld aan!</button>
                             <div class="flex items-center mt-3">
                                 <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="underline">terms and conditions</a>.</label>
