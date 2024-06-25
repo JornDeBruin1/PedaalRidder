@@ -24,7 +24,7 @@
 <div class="fietsen ml-10 mt-12 flex flex-wrap">
     @if (count($fietsen) > 0)
         @foreach($fietsen as $fiets)
-            <a href="" class="fietsPage w-1/2 {{ $fiets->Type }}">
+            <div class="fietsPage w-1/2 product-item cursor-pointer" data-name="{{ $fiets->Naam }}" data-price="{{ $fiets->Prijs }}" data-image="{{ Vite::asset($fiets->AfbeeldingPad) }}" data-description="{{ $fiets->Beschrijving }}" data-rijhoogte="{{ $fiets->RijHoogte }}">
                 <div class="fiets bg-[#cdcdcd] ml-36 pb-5 rounded-lg h-full w-1/2">
                     <div class="fietsImg1 bg-fiets1 bg-no-repeat"></div>
                     <div class="fietsText1">
@@ -33,7 +33,7 @@
                         <img src="{{ Vite::asset($fiets->AfbeeldingPad) }}" alt="Fiets">
                     </div>
                 </div>
-            </a>    
+            </div>
         @endforeach
     @else
         <h1 class="ml-10">Geen Fietsen Gevonden</h1>
@@ -73,11 +73,19 @@
         <img src="{{ Vite::asset('/resources/images/wrapper.png') }}" alt="Wrapper">
     </div>
 </div>
+@endsection
 
-<script src="{{ Vite::asset('resources/js/products.js') }}"></script>
-{{-- <style>
-    .hidden {
-        display: none;
-    }
-</style> --}}
+@section('modal')
+<div id="productModal" class="fixed inset-0 hidden bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div class="bg-white p-5 rounded-lg w-1/2 relative">
+        <button id="closeModal" class="absolute top-0 right-0 m-3 text-gray-500 hover:text-gray-700">
+            <i class="fas fa-times"></i>
+        </button>
+        <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+        <img id="modalImage" src="" alt="" class="w-full h-64 object-contain mb-4">
+        <p id="modalDescription"></p>
+        <p id="modalRijHoogte"></p>
+        <p id="modalPrice" class="text-lg font-bold text-[#ff4500] mt-2"></p>
+    </div>
+</div>
 @endsection

@@ -13,7 +13,7 @@
     <div class="w-full bg-[#F1F4F3]">
         <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
             <a class="text-3xl font-bold leading-none" href="/">
-                <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
+                <img class="w-[25%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
             </a>
             <div class="lg:hidden">
                 <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -63,7 +63,7 @@
             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
                     <a class="mr-auto text-3xl font-bold leading-none" href="/">
-                        <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
+                        <img class="w-[25%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
                     </a>
                     <button class="navbar-close">
                         <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,6 +96,8 @@
             </nav>
         </div>
         @yield('content')
+
+        @yield('modal')
 
         <div class="w-full bg-[#22333B] pb-11 text-white flex">
             <div class="ml-[10%] text-lg w-1/3">
