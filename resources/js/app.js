@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < burger.length; i++) {
             burger[i].addEventListener("click", function () {
                 for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("is-hidden");
+                    menu[j].classList.toggle("hidden");
                 }
             });
         }
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < close.length; i++) {
             close[i].addEventListener("click", function () {
                 for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("is-hidden");
+                    menu[j].classList.toggle("hidden");
                 }
             });
         }
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < backdrop.length; i++) {
             backdrop[i].addEventListener("click", function () {
                 for (let j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("is-hidden");
+                    menu[j].classList.toggle("hidden");
                 }
             });
         }
@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cartIcon) {
         cartIcon.addEventListener('click', function() {
-            cartSheet.classList.toggle('is-hidden');
+            cartSheet.classList.toggle('hidden');
             renderCart();
         });
 
         if (closeCartButton) {
             closeCartButton.addEventListener('click', function() {
-                cartSheet.classList.add('is-hidden');
+                cartSheet.classList.add('hidden');
             });
         }
 
@@ -81,9 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderCart() {
         cartItemsList.innerHTML = '';
         if (cart.length === 0) {
-            emptyCartMessage.classList.remove('is-hidden');
+            emptyCartMessage.classList.remove('hidden');
         } else {
-            emptyCartMessage.classList.add('is-hidden');
+            emptyCartMessage.classList.add('hidden');
             cart.forEach(item => {
                 const listItem = document.createElement('li');
                 listItem.classList.add('flex', 'justify-between', 'items-center');
