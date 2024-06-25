@@ -27,7 +27,7 @@
                 <li><a class="text-sm hover:text-blue-600" href="/">Home</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/accessoires">Accessoires</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/reparatie">Reparatie</a></li>
-                <li><a class="text-sm hover:text-blue-600 " href="#">Huren</a></li>
+                <li><a class="text-sm hover:text-blue-600" href="/rent">Huren</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/products">Kopen</a></li>
                 <li><a class="text-sm hover:text-blue-600" href="/about-us">Over ons</a></li>
                 <li class="text-gray-300"></li>
@@ -77,13 +77,13 @@
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/">Home</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Accessoires</a>
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/accessoires">Accessoires</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/reparatie">Reparatie</a>
                         </li>
                         <li class="mb-1">
-                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Huren</a>
+                            <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/rent">Huren</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="/products">Kopen</a>
@@ -101,9 +101,9 @@
             <div class="ml-[10%] text-lg w-1/3">
                 <ul class="p-4 flex flex-col">
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Accessoires</a></li>
+                    <li><a href="/accessoires">Accessoires</a></li>
                     <li><a href="/reparatie">Reparatie</a></li>
-                    <li><a href="#">Huren</a></li>
+                    <li><a href="/rent">Huren</a></li>
                     <li><a href="/products">Kopen</a></li>
                     <li><a href="/about-us">Over ons</a></li>
                 </ul>
