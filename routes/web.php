@@ -5,6 +5,7 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\ReparatieController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FietsenController;
+use App\Http\Controllers\RentController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\NewsBriefController;
@@ -37,6 +38,7 @@ Route::get('/about-us', [AboutUsController::class, 'index']);
 Route::get('/reparatie', [ReparatieController::class, 'index'])->name('reparatie');
 Route::post('/reparatie/save', [ReparatieController::class, 'store'])->name('reparatie.store');
 Route::get('/products', [FietsenController::class, 'index'])->name('fietsen');
+Route::get('/rent', [RentController::class, 'index'])->name('rent.index');
 
 // Authentication Routes...
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
