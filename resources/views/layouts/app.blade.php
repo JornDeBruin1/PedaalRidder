@@ -8,12 +8,13 @@
     <title>De PedaalRidder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('scripts')
 </head>
 <body class="{{ $bodyClass ?? '' }}">
     <div class="w-full bg-[#F1F4F3]">
         <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
-            <a class="text-3xl font-bold leading-none" href="#">
-                <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="">
+            <a class="text-3xl font-bold leading-none" href="/">
+                <img class="w-[25%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
             </a>
             <div class="lg:hidden">
                 <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -62,8 +63,8 @@
             <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
             <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
                 <div class="flex items-center mb-8">
-                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
-                        <img class="w-[18%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="/">
+                        <img class="w-[25%]" src="{{ Vite::asset('resources/images/PedaalRidder_logo.png') }}" alt="Logo">
                     </a>
                     <button class="navbar-close">
                         <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,6 +98,8 @@
         </div>
         @yield('content')
 
+        @yield('modal')
+
         <div class="w-full bg-[#22333B] pb-11 text-white flex">
             <div class="ml-[10%] text-lg w-1/3">
                 <ul class="p-4 flex flex-col">
@@ -111,11 +114,11 @@
             <div class="w-2/3">
                 <div class="ml-[30%]">
                     <h1 class="text-2xl font-bold pt-6">Meld je aan voor de nieuwsbrief</h1>
-                    <form action="" method="post">
+                    <form action="{{ route('newsbrief.store') }}" method="post">
                         @csrf
                         <div class="flex flex-col">
-                            <label for="">Geef je op voor onze nieuws brief!</label>
-                            <input class="rounded-full w-2/3 mt-5 bg-transparent border border-white px-4 py-3 text-xs lg:placeholder:text-lg" type="text" name="" placeholder="Geef uw mail adres..." id="brief">
+                            <label for="newsbrief">Geef je op voor onze nieuws brief!</label>
+                            <input class="rounded-full w-2/3 mt-5 bg-transparent border border-white px-4 py-3 text-xs lg:placeholder:text-lg" type="email" name="newsbrief" placeholder="Geef uw mail adres..." id="newsbrief" required>
                             <button type="submit" class="bg-white text-black border border-white w-2/3 rounded-full px-4 py-2 mt-4">Meld aan!</button>
                             <div class="flex items-center mt-3">
                                 <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">

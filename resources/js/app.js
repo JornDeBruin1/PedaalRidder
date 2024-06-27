@@ -1,45 +1,40 @@
-// Burger menu
+import './bootstrap';
+
 document.addEventListener("DOMContentLoaded", function () {
-    // open
     const burger = document.querySelectorAll(".navbar-burger");
     const menu = document.querySelectorAll(".navbar-menu");
 
     if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener("click", function () {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
-                }
+        burger.forEach((burgerElement, index) => {
+            burgerElement.addEventListener("click", function () {
+                menu[index].classList.toggle("hidden");
             });
-        }
+        });
     }
 
-    // close
     const close = document.querySelectorAll(".navbar-close");
     const backdrop = document.querySelectorAll(".navbar-backdrop");
 
     if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener("click", function () {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
-                }
+        close.forEach(closeElement => {
+            closeElement.addEventListener("click", function () {
+                menu.forEach(menuElement => {
+                    menuElement.classList.toggle("hidden");
+                });
             });
-        }
+        });
     }
 
     if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener("click", function () {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle("hidden");
-                }
+        backdrop.forEach(backdropElement => {
+            backdropElement.addEventListener("click", function () {
+                menu.forEach(menuElement => {
+                    menuElement.classList.toggle("hidden");
+                });
             });
-        }
+        });
     }
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     const cartIcon = document.querySelector('.fa-cart-shopping');
     const cartSheet = document.getElementById('cartSheet');
     const closeCartButton = document.getElementById('closeCart');
@@ -49,26 +44,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let cart = [];
 
-    cartIcon.addEventListener('click', function() {
-        cartSheet.classList.toggle('hidden');
-        renderCart();
-    });
-
-    closeCartButton.addEventListener('click', function() {
-        cartSheet.classList.add('hidden');
-    });
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const item = {
-                name: this.dataset.name,
-                price: this.dataset.price,
-                image: this.dataset.image
-            };
-            cart.push(item);
+    if (cartIcon) {
+        cartIcon.addEventListener('click', function() {
+            cartSheet.classList.toggle('hidden');
             renderCart();
         });
-    });
+
+        if (closeCartButton) {
+            closeCartButton.addEventListener('click', function() {
+                cartSheet.classList.add('hidden');
+            });
+        }
+
+        if (addToCartButtons.length > 0) {
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const item = {
+                        name: this.dataset.name,
+                        price: this.dataset.price,
+                        image: this.dataset.image
+                    };
+                    cart.push(item);
+                    renderCart();
+
+                    // Show the cart confirmation modal
+                    showCartConfirmationModal();
+                });
+            });
+        }
+    }
 
     function renderCart() {
         cartItemsList.innerHTML = '';
@@ -87,5 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 cartItemsList.appendChild(listItem);
             });
         }
+    }
+
+    function showCartConfirmationModal() {
+        const cartModal = document.getElementById('cartModal');
+        cartModal.classList.remove('opacity-0', 'pointer-events-none');
+        setTimeout(() => {
+            cartModal.classList.add('opacity-0', 'pointer-events-none');
+        }, 2000);
     }
 });
