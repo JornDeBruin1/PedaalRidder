@@ -15,10 +15,7 @@
   @endif
     <div class="bg-headerImgIndex bg-no-repeat customMediaQuery1540:mx-[5%] customMediaQuery1720:mx-[15%]">
         <div class="text-white pt-[20%] pb-[24%] pl-10">
-            <h6>
-                Welkom bij de pedaal ridder
-            </h6>
-            <h1 class="text-5xl">Welkom bij de pedaal ridder</h1>
+            <h1 class="text-5xl">Welkom bij de PedaalRidder</h1>
         </div>
     </div>
     <div class="md:w-full md:mt-[2%] md:mb-[2%] md:pl-[2%] flex md:flex-row customXsMediaQuery:flex-col customXsMediaQuery:items-center">
@@ -35,6 +32,7 @@
         <div class="pt-[20%] pb-[24%] customXsMediaQuery:w-full md:w-[30%] text-white pl-[8%]">
             <h2 class="text-5xl w-3/4 pb-8">Service, onderhoud en verzekering</h2>
             <p>Bij de PedaalRidder bieden we uitgebreide fietsservices, van onderhoud en reparaties tot verzekeringen. Onze deskundige monteurs zorgen dat uw fiets altijd in topconditie is. Kies uit verschillende onderhoudspakketten en verzekeringsopties, zodat u zorgeloos kunt fietsen. Bezoek ons voor een betrouwbare en veilige fietservaring.</p>
+            <a href="/reparatie" class="text-blue-500">Lees meer</a>
         </div>
     </div>
     <div class="bg-[#F1F4F3] w-full flex md:flex-row customXsMediaQuery:flex-col-reverse mt-10 customXsMediaQuery:items-center">
@@ -49,6 +47,8 @@
             </ul>
             <br>
             <p>Kom langs en ervaar het verschil zelf bij De Pedaalridder – jouw specialist in stadsfietsen!</p>
+            <a href="/products" class="text-blue-500">Lees meer</a>
+            
         </div>
         <div class="ml-[15%] w-1/2 mb-10"><img src="{{ Vite::asset('/resources/images/Text-media-static_background.png') }}" alt=""></div>
     </div>
@@ -65,6 +65,7 @@
             </ul>
             <br>
             <p>Ervaar de vrijheid van elektrisch fietsen met De Pedaalridder – jouw partner voor moderne mobiliteit!</p>
+            <a href="/products" class="text-blue-500">Lees meer</a>
         </div>
         <div class="w-1/2 ml-[15%]">
             <img class="mt-10" src="{{ Vite::asset('/resources/images/biking-away.png')}}" alt="">

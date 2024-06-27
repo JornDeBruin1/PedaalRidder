@@ -48,7 +48,6 @@
     <div class="w-2/5 ml-10">
         <h1 class="text-2xl font-bold pt-5">Lease een fiets</h1>
         <p class="text-lg mt-1">Lease een fiets voor een vast bedrag per maand. Zo heb je altijd een fiets en hoef je niet in een keer een groot bedrag te betalen.</p>
-        <button class="bg-[#cdcdcd] text-black border border-white w-2/5 rounded-full px-4 py-2 mt-4">Lease een fiets</button>
     </div>
 </div>
 
@@ -105,5 +104,6 @@
 
 @push('scripts')
     @vite('resources/js/modal.js')
+    @vite('resources/js/cart.js')
     @vite('resources/js/products.js')
 @endpush
