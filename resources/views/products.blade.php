@@ -55,13 +55,13 @@
     <h1 class="text-4xl font-bold mb-8 pt-5 text-center">They talked about our store</h1>
     <div class="reviews flex justify-evenly"> 
         <div class="review1 flex max-w-56">
-            <p>"Erg erg goede winkel bbabababababababababab"</p>
+            <p>"Erg erg goede winkel babbababb ~Mario John"</p>
         </div>
         <div class="review2 flex max-w-56">
-            <p>"Ik ben erg tevreden over de service, Ze hielpen me met baren"</p>
+            <p>"Ik ben erg tevreden over de service, Ze hielpen me met baren ~Henriette van Buren"</p>
         </div>
         <div class="review3 flex max-w-56">
-            <p>"Ik ben erg tevreden over de service ~John mario"</p>
+            <p>"Ik ben erg tevreden over de service ~John Mario"</p>
         </div>
     </div>
 </div>
@@ -69,7 +69,7 @@
 <div class="w-full mt-[2%] mb-[2%] pl-[2%] flex justify-center">
     <div class="w-1/2">
         <h2 class="text-3xl pb-5 pt-[25%] text-center">Geboren en getogen in Zevenaar</h2>
-        <p class="text-lg text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non vestibulum sem. Integer non enim leo. Sed sed tincidunt elit. Sed feugiat consectetur tortor eget eleifend. Donec id sodales nisi. Proin vitae lorem in dolor mattis condimentum.</p>
+        <p class="text-lg text-center">Pedaalridder is diep geworteld in Zevenaar. Hier delen we onze liefde voor fietsen met onze gemeenschap. Onze lokale wortels inspireren ons om fietsen toegankelijk te maken voor iedereen. Bij Pedaalridder streven we naar het delen van onze passie voor fietsen, zowel lokaal als verder weg.</p>
     </div>
     <div class="w-1/2 flex justify-center">
         <img src="{{ Vite::asset('/resources/images/wrapper.png') }}" alt="Wrapper">

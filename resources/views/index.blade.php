@@ -91,11 +91,11 @@
                         <input class="w-full rounded px-4 py-2 bg-white border border-gray-300 focus:outline-none m-2" type="email" name="Email"  placeholder="Email">
                     </div>
                     <div>
-                        <input class="w-full rounded px-4 py-2 bg-white border border-gray-300 focus:outline-none m-2" type="text" name="Telefoonnummer"  placeholder="telefoonnummer">
+                        <input class="w-full rounded px-4 py-2 bg-white border border-gray-300 focus:outline-none m-2" type="text" name="Telefoonnummer"  placeholder="Telefoonnummer">
                     </div>
                     <div>
                         <textarea class="w-full rounded px-4 py-2 bg-white border border-gray-300 focus:outline-none m-2" name="Bericht"  cols="30" rows="10" placeholder="Hoe kunnen we helpen"></textarea></div>
-                        <button type="submit" class="bg-[#22333B] text-white rounded w-1/3 p-1.5">verzend</button>
+                        <button type="submit" class="bg-[#22333B] text-white rounded w-1/3 p-1.5">Verzend</button>
                 </form>
             </div>
         </div>
