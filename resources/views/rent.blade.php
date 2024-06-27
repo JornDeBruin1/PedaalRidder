@@ -3,6 +3,8 @@
 @section('content')
     <div class="w-full flex justify-center mb-16">
         <div class="w-full md:w-4/5 bg-[#F1F4F3] mx-auto">
+            <h2 class="text-center text-2xl font-bold mb-8">Rentals can only be made in-store.</h2>
+
             <!-- Helmen -->
             <h1 class="text-2xl font-bold mb-4">Helmen</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -13,13 +15,6 @@
                         <img src="{{ Vite::asset($helm->image_path) }}" alt="{{ $helm->naam }}" class="w-full h-64 object-contain">
                         <div class="w-full flex flex-col">
                             <h2 class="mt-2 text-xl font-semibold">{{ $helm->naam }}</h2>
-                            <div class="w-full flex justify-between items-center mt-1">
-                                <p class="text-lg font-bold text-[#ff4500]">€{{ $helm->prijs }}</p>
-                                <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $helm->naam }}"
-                                    data-price="{{ $helm->prijs }}" data-image="{{ Vite::asset($helm->image_path) }}">
-                                    <i class="fa-solid fa-handshake"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -35,13 +30,6 @@
                         <img src="{{ Vite::asset($bel->image_path) }}" alt="{{ $bel->naam }}" class="w-full h-64 object-contain">
                         <div class="w-full flex flex-col">
                             <h2 class="mt-2 text-xl font-semibold">{{ $bel->naam }}</h2>
-                            <div class="w-full flex justify-between items-center mt-1">
-                                <p class="text-lg font-bold text-[#ff4500]">€{{ $bel->prijs }}</p>
-                                <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $bel->naam }}"
-                                    data-price="{{ $bel->prijs }}" data-image="{{ Vite::asset($bel->image_path) }}">
-                                    <i class="fa-solid fa-handshake"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -58,14 +46,6 @@
                             class="w-full h-64 object-contain">
                         <div class="w-full flex flex-col">
                             <h2 class="mt-2 text-xl font-semibold">{{ $snelbinder->naam }}</h2>
-                            <div class="w-full flex justify-between items-center mt-1">
-                                <p class="text-lg font-bold text-[#ff4500]">€{{ $snelbinder->prijs }}</p>
-                                <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $snelbinder->naam }}"
-                                    data-price="{{ $snelbinder->prijs }}"
-                                    data-image="{{ Vite::asset($snelbinder->image_path) }}">
-                                    <i class="fa-solid fa-handshake"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -81,13 +61,6 @@
                         <img src="{{ Vite::asset($licht->image_path) }}" alt="{{ $licht->naam }}" class="w-full h-64 object-contain">
                         <div class="w-full flex flex-col">
                             <h2 class="mt-2 text-xl font-semibold">{{ $licht->naam }}</h2>
-                            <div class="w-full flex justify-between items-center mt-1">
-                                <p class="text-lg font-bold text-[#ff4500]">€{{ $licht->prijs }}</p>
-                                <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $licht->naam }}"
-                                    data-price="{{ $licht->prijs }}" data-image="{{ Vite::asset($licht->image_path) }}">
-                                    <i class="fa-solid fa-handshake"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -104,13 +77,6 @@
                             class="w-full h-64 object-contain">
                         <div class="w-full flex flex-col">
                             <h2 class="mt-2 text-xl font-semibold">{{ $fiets->Naam }}</h2>
-                            <div class="w-full flex justify-between items-center mt-1">
-                                <p class="text-lg font-bold text-[#ff4500]">€{{ $fiets->Prijs }}</p>
-                                <a href="javascript:void(0)" class="ml-2 add-to-cart" data-name="{{ $fiets->Naam }}"
-                                    data-price="{{ $fiets->Prijs }}" data-image="{{ Vite::asset($fiets->AfbeeldingPad) }}">
-                                    <i class="fa-solid fa-handshake"></i>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -129,7 +95,6 @@
         <img id="modalImage" src="" alt="" class="w-full h-64 object-contain mb-4">
         <p id="modalDescription"></p>
         <p id="modalRijHoogte"></p>
-        <p id="modalPrice" class="text-lg font-bold text-[#ff4500] mt-2"></p>
     </div>
 </div>
 

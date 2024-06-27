@@ -91,8 +91,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
                 cartItemsList.appendChild(listItem);
             });
+            const checkoutButton = document.createElement('button');
+            checkoutButton.innerText = 'Check-out';
+            checkoutButton.classList.add('mt-4', 'bg-gray-200', 'hover:bg-gray-300', 'text-black', 'px-4', 'py-2', 'rounded');
+            checkoutButton.onclick = () => window.location.href = '/checkout';
+            cartItemsList.appendChild(checkoutButton);
         }
     }
+    
 
     function showCartConfirmationModal() {
         const cartModal = document.getElementById('cartModal');

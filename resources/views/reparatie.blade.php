@@ -29,11 +29,11 @@
                     <input type="text" id="achternaam" name="achternaam" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 " placeholder="Geef uw achternaam..." required >
                 </div>
                 <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">email</label>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email</label>
                     <input type="email" id="email" name="email" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 " placeholder="Geef uw email..." required>
                 </div>
                 <div class="sm:col-span-2">
-                    <label for="bericht" class="block mb-2 text-sm font-medium text-gray-900" id="bericht">uw kapotte fiets details</label>
+                    <label for="bericht" class="block mb-2 text-sm font-medium text-gray-900" id="bericht">Uw kapotte fiets details</label>
                     <textarea id="bericht" name="bericht" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 " placeholder="Geef hier uw probleem..." required></textarea>
                 </div>
                 <button type="submit" class="bg-[#22333B] text-white rounded w-1/3 p-1.5">Stuur de reparatie door</button>

@@ -4,7 +4,7 @@
 <div class="w-full">
     <div class="bg-aboutUsImage">
         <div class="pt-[20%] pb-[24%] pl-10">
-            <h1 class="text-2xl text-white">Veloretti</h1>
+            <h1 class="text-2xl text-white">De PedaalRidder</h1>
             <h1 class="text-6xl pb-1 text-white">Over ons</h1>
             <h1 class="text-1xl text-white">Voor altijd vooruit</h1>
         </div>
@@ -30,7 +30,7 @@
     </div>
     <div class="h-[20%] pt-5 pb-5 w-full flex items-center justify-center">
         <div class="w-[50%]">
-            <h1 class="text-8xl text-center flex items-center justify-center">
+            <h1 class="text-5xl text-center flex items-center justify-center">
                 Ontworpen door de beste ontwerpers,
                 handgemaakt in Europa,
                 rij plezier in elke stad
