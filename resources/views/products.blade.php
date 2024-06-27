@@ -29,7 +29,7 @@
                     <div class="fietsImg1 bg-fiets1 bg-no-repeat"></div>
                     <div class="fietsText1 text-center">
                         <h1 class="text-2xl font-bold pt-5">{{ $fiets->Naam }}</h1>
-                        <img src="{{ Vite::asset($fiets->AfbeeldingPad) }}" alt="Fiets">
+                        <img class="" src="{{ Vite::asset($fiets->AfbeeldingPad) }}" alt="Fiets">
                         <p class="text-lg mt-1 font-bold text-[#ff4500]">€{{ $fiets->Prijs }}</p>
                         <a href="javascript:void(0)" class="mt-2 add-to-cart" data-name="{{ $fiets->Naam }}" data-price="{{ $fiets->Prijs }}" data-image="{{ Vite::asset($fiets->AfbeeldingPad) }}">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -44,7 +44,7 @@
 </div>
 
 <div class="LeaseStuk flex mt-12 mb-12 justify-center">
-    <img src="{{ Vite::asset('resources/images/Text-media-static_background.png') }}" class="w-2/5" alt="Lease Background">
+    <img src="{{ Vite::asset('resources/images/Text-media-static_background.png') }}" class="w-2/5 flex md:flex-row customXsMediaQuery:flex-col-reverse mt-10 customXsMediaQuery:items-center" alt="Lease Background">
     <div class="w-2/5 ml-10">
         <h1 class="text-2xl font-bold pt-5">Lease een fiets</h1>
         <p class="text-lg mt-1">Lease een fiets voor een vast bedrag per maand. Zo heb je altijd een fiets en hoef je niet in een keer een groot bedrag te betalen.</p>
@@ -55,13 +55,13 @@
     <h1 class="text-4xl font-bold mb-8 pt-5 text-center">They talked about our store</h1>
     <div class="reviews flex justify-evenly"> 
         <div class="review1 flex max-w-56">
-            <p>"Erg erg goede winkel babbababb ~Mario John"</p>
+            <p> <b>"Uitstekende service bij De Pedaalridder. Vriendelijk personeel en een ruime keuze aan fietsen. Aanrader!"</b> - Jan Janssen</p>
         </div>
         <div class="review2 flex max-w-56">
-            <p>"Ik ben erg tevreden over de service, Ze hielpen me met baren ~Henriette van Buren"</p>
+            <p><b>"Snelle en professionele reparatie bij De Pedaalridder. Redelijke prijzen en top service. Kom zeker terug!"</b> - Sasha Braus</p>
         </div>
         <div class="review3 flex max-w-56">
-            <p>"Ik ben erg tevreden over de service ~John Mario"</p>
+            <p><b>"Geweldige ervaring bij De Pedaalridder. Mooie elektrische fiets gekocht, zeer tevreden met de kwaliteit en prijs."</b> - Mark Eriksson</p>
         </div>
     </div>
 </div>
@@ -71,7 +71,7 @@
         <h2 class="text-3xl pb-5 pt-[25%] text-center">Geboren en getogen in Zevenaar</h2>
         <p class="text-lg text-center">Pedaalridder is diep geworteld in Zevenaar. Hier delen we onze liefde voor fietsen met onze gemeenschap. Onze lokale wortels inspireren ons om fietsen toegankelijk te maken voor iedereen. Bij Pedaalridder streven we naar het delen van onze passie voor fietsen, zowel lokaal als verder weg.</p>
     </div>
-    <div class="w-1/2 flex justify-center">
+    <div class="w-1/2 flex justify-center flex md:flex-row customXsMediaQuery:flex-col-reverse mt-10 customXsMediaQuery:items-center">
         <img src="{{ Vite::asset('/resources/images/wrapper.png') }}" alt="Wrapper">
     </div>
 </div>
