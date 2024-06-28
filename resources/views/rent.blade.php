@@ -3,7 +3,7 @@
 @section('content')
     <div class="w-full flex justify-center mb-16">
         <div class="w-full md:w-4/5 bg-[#F1F4F3] mx-auto">
-            <h2 class="text-center text-2xl font-bold mb-8">Rentals can only be made in-store.</h2>
+            <h2 class="text-center text-2xl font-bold mb-8">Helaas zijn onze producten alleen te huur via onze winkel.</h2>
 
             <!-- Helmen -->
             <h1 class="text-2xl font-bold mb-4">Helmen</h1>

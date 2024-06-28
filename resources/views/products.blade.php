@@ -51,7 +51,7 @@
     </div>
 </div>
 
-<div class="review mb-6">
+{{-- <div class="review mb-6">
     <h1 class="text-4xl font-bold mb-8 pt-5 text-center">They talked about our store</h1>
     <div class="reviews flex justify-evenly"> 
         <div class="review1 flex max-w-56">
@@ -64,7 +64,7 @@
             <p><b>"Geweldige ervaring bij De Pedaalridder. Mooie elektrische fiets gekocht, zeer tevreden met de kwaliteit en prijs."</b> - Mark Eriksson</p>
         </div>
     </div>
-</div>
+</div> --}}
 
 <div class="w-full mt-[2%] mb-[2%] pl-[2%] flex justify-center">
     <div class="w-1/2">
