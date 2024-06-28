@@ -113,7 +113,7 @@
                 </ul>
                 <p>Zuiderlaan 4, 6905 AE Zevenaar,</p>
                 <p>0316 334 046</p>
-                <p>Openingstijden: Elke dag om 09:00 en 17:00 uur</p>
+                <p>Openingstijden: Elke dag vanaf 09:00 tot 17:00 uur</p>
             </div>
             <div class="w-2/3">
                 <div class="ml-[30%]">
