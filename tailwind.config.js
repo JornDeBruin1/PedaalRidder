@@ -6,7 +6,23 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                headerImgIndex: "url('/resources/images/header-image.png')",
+                aboutUsImage: "url('/resources/images/about-us-header.png')",
+                aboutUsImage2:
+                    "url('/resources/images/Text-media-new_wrapper.png')",
+                contentImgIndex:
+                    "url('/resources/images/content-index-img.png')",
+                headerImgProducts:
+                    "url('/resources/images/product-header.png')",
+            },
+            screens: {
+                customXsMediaQuery: "375px",
+                customMediaQuery1540: "1540px",
+                customMediaQuery1720: "1720px",
+            },
+        },
     },
     plugins: [],
 };
